@@ -75,14 +75,15 @@ jobs:
       - name: Run pytest
         id: pytest
         run: |
+          # Create empty output files in case pytest failed to run
+          touch $REPORTS_DIR/{pytest-report.xml,pytest-coverage.xml,pytest-output.txt}
+
           if ! docker compose run --rm sign_node_tests bash -o pipefail -c "
             pytest -v --cov \
               --junit-xml=$REPORTS_DIR/pytest-report.xml \
               --cov-report=xml:$REPORTS_DIR/pytest-coverage.xml \
               --cov-report=term | tee $REPORTS_DIR/pytest-output.txt"
           then
-            # Create empty output files in case pytest failed to run
-            touch $REPORTS_DIR/{pytest-report.xml,pytest-coverage.xml,pytest-output.txt}
             echo "failure=1" >> $GITHUB_OUTPUT
           fi
 
