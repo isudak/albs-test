@@ -1,7 +1,7 @@
 # System Overview
 
 <picture>
-  <img alt="Test Coverage" src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/andrewlukoshko/fd471834348bb248a0881bc9ccfd45dd/raw/coverage-badge.json">
+  <img alt="Test Coverage" src="https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/isudak/77408a75d411a3e29bf01b16ac444604/raw/coverage-badge.json">
 </picture>
 <br/><br/>
 
