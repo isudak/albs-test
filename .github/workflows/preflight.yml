@@ -152,4 +152,5 @@ jobs:
           cat $REPORTS_DIR/{coverage,pytest,pylint,black,isort,bandit}-report.md \
             > $GITHUB_STEP_SUMMARY 2>/dev/null || true
 
-      - run: exit ${{ steps.pytest.outputs.failure }}
+      - name: Set exit code
+        run: exit ${{ steps.pytest.outputs.failure }}
