@@ -54,7 +54,7 @@ jobs:
         uses: schneegans/dynamic-badges-action@v1.7.0
         with:
            auth: ${{ secrets.GIST_TOKEN }}
-           gistID: fd471834348bb248a0881bc9ccfd45dd
+           gistID: 77408a75d411a3e29bf01b16ac444604
            filename: coverage-badge.json
            label: Test Coverage
            message: ${{ steps.pytest.outputs.percent_covered }}%
