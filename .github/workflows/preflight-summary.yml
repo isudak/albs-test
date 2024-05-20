@@ -50,6 +50,7 @@ jobs:
 
       - name: Generate Preflight Summary
         run: |
+          ls -l
           touch test-summary.md code-coverage-results.md
 
           {
