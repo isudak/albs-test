@@ -103,6 +103,7 @@ jobs:
       - name: Run pytest
         run: |
           docker compose run --rm sign_node_tests bash -o pipefail -c "
+            echo hello world >> /usr/local/lib/python3.9/site-packages/pytest/__init__.py
             pytest -v --cov \
               --junit-xml=$REPORTS_DIR/pytest-report.xml \
               --cov-report=xml:$REPORTS_DIR/pytest-coverage.xml \
