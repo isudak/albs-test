@@ -20,6 +20,7 @@ EOT
 ADD --chmod=755 https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh /
 
 
+
 FROM sign-node as sign-node-tests
 
 COPY requirements-tests.txt .
