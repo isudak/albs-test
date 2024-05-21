@@ -10,6 +10,7 @@ class UploadError(Exception):
     pass
 
 
+
 class BaseUploader(object):
     def get_artifacts_list(self, artifacts_dir: str) -> typing.List[str]:
         """
