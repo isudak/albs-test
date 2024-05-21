@@ -18,7 +18,7 @@ jobs:
       - name: Check the PR title
         uses: gsactions/commit-message-checker@v2
         with:
-          pattern: '^.{73,}'
+          pattern: '^.{1,72}$'
           excludeTitle: 'false'
           excludeDescription: 'true'
           error: 'The maximum line length of 72 characters is exceeded.'
